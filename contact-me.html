@@ -1,10 +1,79 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Contact Me</title>
-  </head>
 
-  <body>
-    <!-- TODO -->
-  </body>
+<head>
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="stylesheet" href="constraint-validation.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Contact Me</h1>
+        <form id="connect-form" action="">
+            <div class="form-group">
+                <label for="full-name">Your Name</label>
+                <input id="full-name" class="form-control validate-input" type="text" name="full-name" />
+                <small class="error" aria-live="polite"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input id="email" class="form-control validate-input" type="email" name="email" />
+                <small class="error" aria-live="polite"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="kind">Reason for contacting (select from options below):</label>
+                <select class="form-control" name="kind" id="contact-kind">
+                    <option value="choose" selected="selected" disabled>
+                        Choose one
+                    </option>
+                    <option value="business">Job opportunity</option>
+                    <option value="technical">Talk code</option>
+                </select>
+                <small class="error" aria-live="polite"></small>
+            </div>
+
+            <div class="form-group business hide">
+                <label for="job-title">Job title</label>
+                <input id="job-title" class="form control validate-input" type="text" name="job-title" />
+                <small class="error" aria-live="polite"></small>
+            </div>
+
+            <div class="form-group business hide">
+                <label for="company-website">Company Website</label>
+                <input id="company-website" class="form control validate-input" type="url" name="company-website" />
+                <small class="error" aria-live="polite"></small>
+            </div>
+
+            <div class="form-group technical hide">
+                <label for="lang">Coding language (select from options below):</label>
+                <select class="form-control" name="kind" id="coding-kind">
+                    <option value="choose" selected="selected" disabled>
+                        Choose one
+                    </option>
+                    <option value="html-type">HTML</option>
+                    <option value="css-type">CSS</option>
+                    <option value="js-type">JavaScript</option>
+                </select>
+                <small class="error" aria-live="polite"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message</label>
+                <input id="message" class="form-control validate-input" type="text" name="message" />
+                <small class="error" aria-live="polite"></small>
+            </div>
+
+            <div class="form-group">
+                <input class="btn btn-primary" type="submit" value="Submit" />
+            </div>
+        </form>
+    </div>
+
+    <script src="contact-me.js"></script>
+</body>
+
 </html>
